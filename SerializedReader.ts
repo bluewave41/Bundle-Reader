@@ -50,10 +50,8 @@ class SerializedReader extends Reader {
 	}
 	readTypes() {
 		const typeCount = this.readInt32();
-		console.log(typeCount);
 		for(var i=0;i<typeCount;i++) {
 			this.types.push(this.readSerializedType(false));
-			console.log(i)
 		}
 	}
 	readSerializedType(isRefType: boolean) {
